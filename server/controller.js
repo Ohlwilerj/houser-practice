@@ -1,7 +1,7 @@
 module.exports = {
   getHouses: async (req, res) => {
     const db = req.app.get("db");
-    const allHouses = await db.get_all_houses;
+    const allHouses = await db.get_all_houses();
     res.status(200).send(allHouses);
   },
 
